@@ -71,10 +71,10 @@
 Array : 
 */
 
-let price = [101, 101, 20, 301, 50, 6011];
+// let price = [101, 101, 20, 301, 50, 6011];
 
-let result = price.indexOf(101, 1);
-console.log(result);
+// let result = price.indexOf(101, 1);
+// console.log(result);
 
 // add => push (add element  to last )
 // price.push(70);
