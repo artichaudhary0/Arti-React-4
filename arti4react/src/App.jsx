@@ -1,38 +1,39 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import Counter from "./components/Counter";
 
 function App() {
-  const [state, setState] = useState({ counter: 0, counterName: "Increase" });
-  const [count, setCount] = useState(0);
+  // let heading = "This is my heading";
+
+  const [heading, setHeading] = useState("This is my heading");
+  const [state, setState] = useState("This is my heading");
+
+  function changeHeading() {
+    // heading = "Second heading";
+
+    // state ="second heading"
+    setState("Second Heading");
+
+    setHeading("Second heading");
+
+    alert(heading);
+  }
 
   return (
     <>
-      <div>{state.counter}</div>
+      <h1>{state}</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+        architecto necessitatibus culpa impedit sequi harum omnis tempore illo
+        delectus laborum!
+      </p>
       <button
         onClick={() => {
-          // mutable
-          // state.counter = state.counter + 1;
-          // console.log(state.counter);
-          // console.log(state);
-          // setState(state);
-
-          
-          // im-mutable
-          setState.counter;
-          setState({ ...state, counter: state.counter + 1 });
+          changeHeading();
         }}
       >
-        Increment
+        Change heading
       </button>
-
-      <h1>{count}</h1>
-
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Increment2
-      </button>
+      <Counter />
     </>
   );
 }
