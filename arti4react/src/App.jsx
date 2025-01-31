@@ -1,39 +1,32 @@
 import React, { useState } from "react";
 import Counter from "./components/Counter";
+import ChangeHeading from "./components/ChangeHeading";
+import ToggleButton from "./components/ToggleButton";
+import InputTextField from "./components/InputTextField";
+import ShowHideText from "./components/ShowHideText";
+import ChangeBackground from "./components/ChangeBackground";
+import MouseEvent from "./components/MouseEvent";
+import DoubleClick from "./components/DoubleClick";
 
 function App() {
-  // let heading = "This is my heading";
-
-  const [heading, setHeading] = useState("This is my heading");
-  const [state, setState] = useState("This is my heading");
-
-  function changeHeading() {
-    // heading = "Second heading";
-
-    // state ="second heading"
-    setState("Second Heading");
-
-    setHeading("Second heading");
-
-    alert(heading);
-  }
-
   return (
     <>
-      <h1>{state}</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-        architecto necessitatibus culpa impedit sequi harum omnis tempore illo
-        delectus laborum!
-      </p>
-      <button
-        onClick={() => {
-          changeHeading();
-        }}
-      >
-        Change heading
-      </button>
+      <ChangeHeading />
+      <hr />
       <Counter />
+      <hr />
+      <ToggleButton />
+      <hr />
+      <InputTextField />
+      <hr />
+      <ShowHideText />
+      <hr />
+      <ChangeBackground />
+
+      <hr />
+      <MouseEvent />
+      <hr />
+      <DoubleClick />
     </>
   );
 }
